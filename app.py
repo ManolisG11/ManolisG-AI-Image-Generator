@@ -28,7 +28,7 @@ option1 = st.selectbox('Character',('R2-D2', 'C-3PO', 'Bubmblebee', 'ET', 'Darth
 st.subheader("να:")
 option2 = st.selectbox('Doing what?',('Dancin tango', 'laying on the beach', 'swimming', 'with a stylish hat'))
 final_opt = (option1, ' ', option2)
-input_prompt = 
+input_prompt = final_opt
 if input_prompt is not None:
     if st.button("Generate Image"):
         image_output = generate_images_using_huggingface_diffusers(input_prompt)
