@@ -23,8 +23,12 @@ def generate_images_using_huggingface_diffusers(text):
     image = pipe(prompt).images[0] 
     return image
 
-st.subheader("Image generation using Huggingface Diffusers")
-input_prompt = st.text_input("Enter your text prompt")
+st.subheader("Φαντάσου ο")
+option1 = st.selectbox('Character',('R2-D2', 'C-3PO', 'Bubmblebee', 'ET', 'Darth Vader', 'Alien'))
+st.subheader("να:")
+option2 = st.selectbox('Doing what?',('Dancin tango', 'laying on the beach', 'swimming', 'with a stylish hat'))
+final_opt = (option1, ' ', option2)
+input_prompt = 
 if input_prompt is not None:
     if st.button("Generate Image"):
         image_output = generate_images_using_huggingface_diffusers(input_prompt)
